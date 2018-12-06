@@ -1,0 +1,39 @@
+{
+  "version": "1.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmi3y/a-que-hora"
+  },
+  "license": "MIT",
+  "fitbit": {
+    "appUUID": "46c05084-af79-40f6-ba5c-a53075d2e15b",
+    "appType": "clockface",
+    "appDisplayName": "¿A qué hora?",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "¿A qué hora?"
+      }
+    }
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~1.0.0",
+    "@fitbit/sdk-cli": "^1.0.0",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.10",
+    "fitbit-sdk-types": "^2.0.1",
+    "mocha": "^5.2.0",
+    "ts-mocha": "^2.0.0"
+  },
+  "scripts": {
+    "test": "ts-mocha -p test/tsconfig.json test/**/*spec.ts",
+    "build": "fitbit-build",
+    "preversion": "npm run test",
+    "postversion": "npm run build && cp build/app.fba releases/a-que-hora-${npm_package_version}.fba"
+  }
+}
