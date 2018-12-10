@@ -1,8 +1,12 @@
 import { roundToBase } from './utils';
 
+/**
+ * Count in French to 60
+ */
+
 let numbersToWords: {[key: number]: string} = {
     0: 'zéro',
-    1: 'un',
+    1: 'une',
     2: 'deux',
     3: 'trois',
     4: 'quatre',
@@ -27,12 +31,14 @@ let numbersToWords: {[key: number]: string} = {
     60: 'soixante'
 }
 
-export function spellTheNumber(aNumber: number): string[] {
+export default function spellTheNumber(aNumber: number): string[] {
     if (numbersToWords.hasOwnProperty(aNumber))  {
         return [numbersToWords[aNumber]]
     } else {
         const roundedDown = roundToBase(aNumber);
+        const out = [...spellTheNumber(roundedDown)]
         const modulo = aNumber % roundedDown;
-        return [...spellTheNumber(roundedDown), ...spellTheNumber(modulo)]
+        if (modulo == 1) out.push('et')
+        return out.concat(spellTheNumber(modulo))
     }
 }

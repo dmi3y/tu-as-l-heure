@@ -1,4 +1,5 @@
 <svg class="background">
+  <image href="heart.svg"/>
   <text id="time" class="text"/>
   <text id="hour" class="text"/>
   <text id="minute" class="text"/>

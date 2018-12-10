@@ -17,12 +17,13 @@ clock.ontick = (evt) => {
   const nowMinute = today.getMinutes();
   const {
     time,
-    hour,
-    minute,
-    ampm
+    minutesSpelled,
+    hoursSpelled,
+    hoursVerbatim,
+    when
   } = timeInFrench(nowHour, nowMinute)
   etime.text = `${time}`
-  ehour.text = `${hour}`
-  eminute.text = `${minute}`
-  eampm.text = `${ampm}`;
+  ehour.text = `${hoursSpelled} ${hoursVerbatim}`
+  eminute.text = `${minutesSpelled}`
+  eampm.text = `${when}`;
 }

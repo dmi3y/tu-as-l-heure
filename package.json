@@ -1,13 +1,13 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.0",
   "name": "tu-as-l-heure",
+  "description": "Fitbit's Versa clockface which tells time in French.",
   "repository": {
     "type": "git",
     "url": "https://github.com/dmi3y/a-que-hora"
   },
   "license": "MIT",
   "fitbit": {
-    "appUUID": "46c05084-af79-40f6-ba5c-a53075d2e15b",
     "appType": "clockface",
     "appDisplayName": "Tu as l'heure?",
     "iconFile": "resources/icon.png",
@@ -20,7 +20,8 @@
       "en": {
         "name": "Tu as l'heure?"
       }
-    }
+    },
+    "appUUID": "d534b3f3-9744-4547-a59f-38285479658f"
   },
   "devDependencies": {
     "@fitbit/sdk": "~1.0.0",
