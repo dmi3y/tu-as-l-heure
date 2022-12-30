@@ -24,7 +24,7 @@
     "appUUID": "d534b3f3-9744-4547-a59f-38285479658f"
   },
   "devDependencies": {
-    "@fitbit/sdk": "~1.0.0",
+    "@fitbit/sdk": "~1.0.6",
     "@fitbit/sdk-cli": "^1.0.0",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.10",
